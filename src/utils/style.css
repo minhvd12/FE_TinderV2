@@ -1,0 +1,16 @@
+
+
+
+
+.modal-image{
+    height: 300px !important;
+    width: 100%;
+    /* max-width: 100px !important; */
+    object-fit: cover;
+  }
+  .modal-image1{
+    height: 200px !important;
+    width: 100%;
+    /* max-width: 100px !important; */
+    object-fit: cover;
+  }
