@@ -6,13 +6,13 @@ import { api } from '../constants';
 import useAuth from '../hooks/useAuth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBaYVyy9VAdCZpa9x2u9acdUIkaVQll2hY",
-  authDomain: "captone-dfc3c.firebaseapp.com",
-  projectId: "captone-dfc3c",
-  storageBucket: "captone-dfc3c.appspot.com",
-  messagingSenderId: "202082595172",
-  appId: "1:202082595172:web:f02413d2b9d8087df34a71",
-  measurementId: "G-MG4829B610"
+  apiKey: "AIzaSyDfajswjeDVGFnJ_upvhQWr6lrO2E1FLGw",
+  authDomain: "itjobmatching.firebaseapp.com",
+  projectId: "itjobmatching",
+  storageBucket: "itjobmatching.appspot.com",
+  messagingSenderId: "908502804981",
+  appId: "1:908502804981:web:09ce0a6187950403b418bc",
+  measurementId: "G-E498V9XVJS"
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -21,7 +21,7 @@ const messaging = getMessaging(firebaseApp);
 
 
 export const subscribeToTopic = (topicName) => {
-  getToken(messaging, { vapidKey: 'BJRSeOjGCZprYK9nMX8IjM5ugm2aq9sJdKyeygrcSlujs3IOeiL6ONXeFIVWiV1igCWnzKUPWO2JDIyncUtC5N8' }).then((currentToken) => {
+  getToken(messaging, { vapidKey: 'BMzTceLBUaJyznH-J0D34wQIkBeoieNFWXZMkNNsYj3kbVvY7Qp9-edlS1NRn6_Y9scZdG2ru35q21wjTfAtel0' }).then((currentToken) => {
     axios({
       url: `${api.baseUrl}/${api.configPathType.api}/${api.versionType.v1}/${api.POST_SUBSCRIBE_TOPIC}?topic=${topicName}`,
       method: 'POST',
@@ -37,7 +37,7 @@ export const subscribeToTopic = (topicName) => {
 
 
 export const unSubscribeToTopic = (topicName) => {
-  getToken(messaging, { vapidKey: 'BJRSeOjGCZprYK9nMX8IjM5ugm2aq9sJdKyeygrcSlujs3IOeiL6ONXeFIVWiV1igCWnzKUPWO2JDIyncUtC5N8' }).then((currentToken) => {
+  getToken(messaging, { vapidKey: 'BMzTceLBUaJyznH-J0D34wQIkBeoieNFWXZMkNNsYj3kbVvY7Qp9-edlS1NRn6_Y9scZdG2ru35q21wjTfAtel0' }).then((currentToken) => {
     axios({
       url: `${api.baseUrl}/${api.configPathType.api}/${api.versionType.v1}/${api.POST_UNSUBSCRIBE_TOPIC}?topic=${topicName}`,
       method: 'POST',
