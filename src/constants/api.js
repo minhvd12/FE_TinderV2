@@ -6,7 +6,7 @@ export const versionType = {
     api: 'api'
   };
   
-  export const baseUrl = 'https://stg-api-itjob.unicode.edu.vn';
+  export const baseUrl = 'https://itjobs.azurewebsites.net';
   
   
   
