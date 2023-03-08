@@ -25,7 +25,7 @@ export default function ProfileWorking({ workinge }) {
   // console.log(dayjs(workinge.start_date).format('DD/MM/YYYY'))
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/job-positions/${workinge.job_position_id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/job-positions/${workinge.job_position_id}`,
       method: 'get',
     })
       .then((response) => {

@@ -46,7 +46,7 @@ export default function UserCompanyTableRow({ rows, onDeleteRow, onReject, onErr
 // console.log(rows)
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/companies/${rows.company_id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/companies/${rows.company_id}`,
       method: 'get',
     })
       .then((response) => {
@@ -77,7 +77,7 @@ export default function UserCompanyTableRow({ rows, onDeleteRow, onReject, onErr
 
   const handleReject = () => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/emails/reject/join?email=${rows.email}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/emails/reject/join?email=${rows.email}`,
       method: 'get',
     })
       .then((response) => {

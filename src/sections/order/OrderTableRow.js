@@ -25,7 +25,7 @@ export default function OrderTableRow({ row }) {
   useEffect(() => {
     
         axios({
-            url: `https://stg-api-itjob.unicode.edu.vn/api/v1/applicants/${row.create_by}`,
+            url: `https://itjobs.azurewebsites.net/api/v1/applicants/${row.create_by}`,
             method: 'get',
           })
             .then((response) => {

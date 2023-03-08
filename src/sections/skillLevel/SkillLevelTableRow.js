@@ -187,7 +187,7 @@ export default function SkillLevelTableRow({ row, selected, onEditRow, onEditRow
 
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/skill-levels?page-size=50&skillGroupId=${row.id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/skill-levels?page-size=50&skillGroupId=${row.id}`,
       method: 'get',
     })
       .then((response) => {

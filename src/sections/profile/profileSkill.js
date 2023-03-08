@@ -10,7 +10,7 @@ export default function ProfileSkill({ skilles }) {
   const [Skillerr, setSkills] = useState([]);
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/skills/${skilles.skill_id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/skills/${skilles.skill_id}`,
       method: 'get',
     })
       .then((response) => {

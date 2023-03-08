@@ -34,7 +34,7 @@ export default function TransTableRow({ row }) {
     if(row.type_of_transaction === 'Upgrade' || row.type_of_transaction === 'Money recharge'  ) {
       
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/companies/${row.create_by}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/companies/${row.create_by}`,
       method: 'get',
     })
       .then((response) => {
@@ -49,14 +49,14 @@ export default function TransTableRow({ row }) {
 
     if(row.type_of_transaction === 'Top up for job post' || row.type_of_transaction ==='Create job post' ||  row.type_of_transaction === 'Return money') {
       axios({
-        url: `https://stg-api-itjob.unicode.edu.vn/api/v1/job-posts/${row.create_by}`,
+        url: `https://itjobs.azurewebsites.net/api/v1/job-posts/${row.create_by}`,
         method: 'get',
       })
         .then((response) => {
           // setJobPost(response.data.data);
           // console.log(response.data.data);
           axios({
-            url: `https://stg-api-itjob.unicode.edu.vn/api/v1/companies/${response.data.data.company_id}`,
+            url: `https://itjobs.azurewebsites.net/api/v1/companies/${response.data.data.company_id}`,
             method: 'get',
           })
             .then((response) => {
@@ -74,7 +74,7 @@ export default function TransTableRow({ row }) {
       };
       if(row.type_of_transaction === 'Reward exchange') {
         axios({
-          url: `https://stg-api-itjob.unicode.edu.vn/api/v1/applicants/${row.create_by}`,
+          url: `https://itjobs.azurewebsites.net/api/v1/applicants/${row.create_by}`,
           method: 'get',
         })
           .then((response) => {

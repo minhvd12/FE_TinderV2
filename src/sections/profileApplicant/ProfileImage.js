@@ -8,7 +8,7 @@ export default function ProfileFollowInfo(profile) {
   const [listImage, setListImage] = useState([]);
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/album-images?page-size=50&profileApplicantId=${profile.profile.id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/album-images?page-size=50&profileApplicantId=${profile.profile.id}`,
       method: 'get',
     })
       .then((response) => {

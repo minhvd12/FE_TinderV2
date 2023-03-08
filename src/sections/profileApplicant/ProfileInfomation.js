@@ -20,7 +20,7 @@ export default function ProfileInfomation({ profile }) {
   const [Skills, setSkills] = useState([]);
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/profile-applicant-skills?page-size=50&profileApplicantId=${profile.id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/profile-applicant-skills?page-size=50&profileApplicantId=${profile.id}`,
       method: 'get',
     })
       .then((response) => {

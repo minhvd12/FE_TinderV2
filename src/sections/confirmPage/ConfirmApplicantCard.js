@@ -70,7 +70,7 @@ export default function ConfirmApplicantCard({ applicant, onDeleteRow, onErrorRo
   }, [applicant.id]);
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/album-images?page-size=50&applicantId=${applicant.id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/album-images?page-size=50&applicantId=${applicant.id}`,
       method: 'get',
     })
       .then((response) => {
@@ -81,7 +81,7 @@ export default function ConfirmApplicantCard({ applicant, onDeleteRow, onErrorRo
   }, [applicant.id]);
   const handleAccept = () => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/applicants/update?id=${applicant.id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/applicants/update?id=${applicant.id}`,
       method: 'put',    
       headers: {
         //  "Content-Type": "multipart/form-data" 
@@ -104,7 +104,7 @@ export default function ConfirmApplicantCard({ applicant, onDeleteRow, onErrorRo
   };
   const handleReject = () => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/applicants/update?id=${applicant.id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/applicants/update?id=${applicant.id}`,
       method: 'put',      
       headers: {
         //  "Content-Type": "multipart/form-data" 

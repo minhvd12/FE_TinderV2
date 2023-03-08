@@ -37,7 +37,7 @@ export default function UserProfileRow({ rows }) {
   };
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/working-styles/${rows.working_style_id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/working-styles/${rows.working_style_id}`,
       method: 'get',
     })
       .then((response) => {
@@ -48,7 +48,7 @@ export default function UserProfileRow({ rows }) {
   }, [rows.working_style_id]);
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/job-positions/${rows.job_position_id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/job-positions/${rows.job_position_id}`,
       method: 'get',
     })
       .then((response) => {

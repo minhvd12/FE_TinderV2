@@ -28,7 +28,7 @@ export default function ProfileAbout({ profile }) {
 
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/applicants/${profile.applicant_id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/applicants/${profile.applicant_id}`,
       method: 'get',
     })
       .then((response) => {

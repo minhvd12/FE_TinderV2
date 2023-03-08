@@ -57,7 +57,7 @@ export default function ConfirmCompanyCard({ post, onDeleteRow, onErrorRow,onRej
 
   const handleAccept = () => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/emails/accept/email?email=${post.email}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/emails/accept/email?email=${post.email}`,
       method: 'get',
       headers: {
         //  "Content-Type": "multipart/form-data" 
@@ -76,7 +76,7 @@ export default function ConfirmCompanyCard({ post, onDeleteRow, onErrorRow,onRej
   };
   const handleReject = () => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/emails/reject/email?email=${post.email}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/emails/reject/email?email=${post.email}`,
       method: 'get',
       headers: {
         //  "Content-Type": "multipart/form-data" 

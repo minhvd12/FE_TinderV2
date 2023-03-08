@@ -77,7 +77,7 @@ export default function UserTableRow({ row, selected, onDeleteRow }) {
   useEffect(() => {
     // setLoadingButton(true)
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/profile-applicants?applicantId=${row.id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/profile-applicants?applicantId=${row.id}`,
       method: 'get',
     })
       .then((response) => {
@@ -88,7 +88,7 @@ export default function UserTableRow({ row, selected, onDeleteRow }) {
         console.log(error);
       });
       axios({
-        url: `https://stg-api-itjob.unicode.edu.vn/api/v1/wallets?applicantId=${row.id}`,
+        url: `https://itjobs.azurewebsites.net/api/v1/wallets?applicantId=${row.id}`,
         method: 'get',
       })
         .then((response) => {

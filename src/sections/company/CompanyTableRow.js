@@ -70,7 +70,7 @@ export default function CompanyTableRow({ row, selected, onDeleteRow }) {
   useEffect(() => {
     // setLoadingButton(true)
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/job-posts?sort-key=CreateDate&companyId=${row.id}`,
+      url: `hhttps://itjobs.azurewebsites.net/api/v1/job-posts?sort-key=CreateDate&companyId=${row.id}`,
       method: 'get',
     })
       .then((response) => {
@@ -84,7 +84,7 @@ export default function CompanyTableRow({ row, selected, onDeleteRow }) {
   const handleDeleteRow = () => {
   
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/companies/${row.id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/companies/${row.id}`,
       method: 'delete',
       headers: {
         //  "Content-Type": "multipart/form-data" 
