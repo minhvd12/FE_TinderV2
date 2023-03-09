@@ -69,7 +69,7 @@ export default function Order() {
 
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/transactions?typeOfTransaction=Reward%20exchange`,
+      url: `https://itjobs.azurewebsites.net/api/v1/transactions?typeOfTransaction=Reward%20exchange`,
       method: 'get',
     })
       .then((response) => {

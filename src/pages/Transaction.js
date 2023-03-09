@@ -79,7 +79,7 @@ export default function Transaction() {
   const [accountBalance, setAccountBalance] = useState('');
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/transactions/system`,
+      url: `https://itjobs.azurewebsites.net/api/v1/transactions/system`,
       method: 'get',
     })
       .then((response) => {
@@ -93,7 +93,7 @@ export default function Transaction() {
   useEffect(() => {
     if (filterStartDate === null || filterEndDate === null){
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/transactions`,
+      url: `https://itjobs.azurewebsites.net/api/v1/transactions`,
       method: 'get',
     })
       .then((response) => {
@@ -107,7 +107,7 @@ export default function Transaction() {
     if (filterStartDate !== null && filterEndDate !== null) {
       
       axios({
-        url: `https://stg-api-itjob.unicode.edu.vn/api/v1/transactions?fromDate=${dayjs(filterStartDate).format('YYYY-MM-DD')}&toDate=${dayjs(filterEndDate).add(1, 'day').format('YYYY-MM-DD')}`,
+        url: `https://itjobs.azurewebsites.net/api/v1/transactions?fromDate=${dayjs(filterStartDate).format('YYYY-MM-DD')}&toDate=${dayjs(filterEndDate).add(1, 'day').format('YYYY-MM-DD')}`,
         method: 'get',
       })
         .then((response) => {

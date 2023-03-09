@@ -154,7 +154,7 @@ export default function Product() {
     formData.append('uploadFile', data.image);
     }
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/products`,
+      url: `https://itjobs.azurewebsites.net/api/v1/products`,
       method: 'post',
       headers: {
         //  "Content-Type": "multipart/form-data" 
@@ -184,7 +184,7 @@ export default function Product() {
 
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/products?status=1`,
+      url: `https://itjobs.azurewebsites.net/api/v1/products?status=1`,
       method: 'get',
     })
       .then((response) => {
@@ -204,7 +204,7 @@ export default function Product() {
   };
   const handleDeleteRow = (id) => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/products/${id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/products/${id}`,
       method: 'delete',
       headers: {
         //  "Content-Type": "multipart/form-data" 
