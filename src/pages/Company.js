@@ -78,7 +78,7 @@ export default function PageThree() {
 
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/companies?sort-key=Status&sort-order=DESC`,
+      url: `https://itjobs.azurewebsites.net/api/v1/companies?sort-key=Status&sort-order=DESC`,
       method: 'get',
     })
       .then((response) => {

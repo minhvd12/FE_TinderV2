@@ -70,7 +70,7 @@ export default function CompanyTableRow({ row, selected, onDeleteRow }) {
   useEffect(() => {
     // setLoadingButton(true)
     axios({
-      url: `hhttps://itjobs.azurewebsites.net/api/v1/job-posts?sort-key=CreateDate&companyId=${row.id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/job-posts?sort-key=CreateDate&companyId=${row.id}`,
       method: 'get',
     })
       .then((response) => {
