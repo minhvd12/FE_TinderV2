@@ -56,7 +56,7 @@ export default function Approval() {
   window.addEventListener('scroll', toggleVisible);
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/companies?status=2`,
+      url: `https://itjobs.azurewebsites.net/api/v1/companies?status=2`,
       method: 'get',
     })
       .then((response) => {
@@ -69,7 +69,7 @@ export default function Approval() {
 
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/applicants?earnMoney=2`,
+      url: `https://itjobs.azurewebsites.net/api/v1/applicants?earnMoney=2`,
       method: 'get',
     })
       .then((response) => {
