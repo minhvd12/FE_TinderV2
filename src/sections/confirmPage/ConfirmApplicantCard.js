@@ -59,7 +59,7 @@ export default function ConfirmApplicantCard({ applicant, onDeleteRow, onErrorRo
   };
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/profile-applicants?page-size=50&applicantId=${applicant.id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/profile-applicants?page-size=50&applicantId=${applicant.id}`,
       method: 'get',
     })
       .then((response) => {
