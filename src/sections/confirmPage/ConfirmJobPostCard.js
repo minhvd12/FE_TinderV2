@@ -177,7 +177,7 @@ dayjs.extend(isSameOrBefore)
   const handleAccept = () => {
 if(dayjs(jobpost.start_time).isSameOrBefore(dayjs())){
   axios({
-    url: `https://itjobs.azurewebsites.net/api/v1/job-posts/approval?id=${jobpost.id}`,
+    url: `https://itjobs.azurewebsites.net/api/v1/approval?id=${jobpost.id}`,
     method: 'put',       
     data: {
       id: jobpost.id,
