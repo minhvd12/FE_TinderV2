@@ -39,7 +39,7 @@ export default function PageOne() {
   }, []);
   useEffect(()  =>  {
     axios({
-     url: `https://stg-api-itjob.unicode.edu.vn/api/v1/applicants?gender=1`,
+     url: `https://itjobs.azurewebsites.net/api/v1/applicants?gender=1`,
      method: 'get',
    })
      .then((response) => {
@@ -49,7 +49,7 @@ export default function PageOne() {
  }, []);
  useEffect(()  =>  {
   axios({
-   url: `https://stg-api-itjob.unicode.edu.vn/api/v1/applicants?gender=0`,
+   url: `https://itjobs.azurewebsites.net/api/v1/applicants?gender=0`,
    method: 'get',
  })
    .then((response) => {
@@ -69,7 +69,7 @@ export default function PageOne() {
   }, []);
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/profile-applicants?status=0`,
+      url: `https://itjobs.azurewebsites.net/api/v1/profile-applicants?status=0`,
       method: 'get',
     })
       .then((response) => {
@@ -79,7 +79,7 @@ export default function PageOne() {
   }, []);
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/profile-applicants?sort-key=CreateDate`,
+      url: `https://itjobs.azurewebsites.net/api/v1/profile-applicants?sort-key=CreateDate`,
       method: 'get',
     })
       .then((response) => {
@@ -89,7 +89,7 @@ export default function PageOne() {
   }, []);
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/job-posts?status=0`,
+      url: `https://itjobs.azurewebsites.net/api/v1/job-posts?status=0`,
       method: 'get',
     })
       .then((response) => {
@@ -99,7 +99,7 @@ export default function PageOne() {
   }, []);
   useEffect(() => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/job-posts`,
+      url: `https://itjobs.azurewebsites.net/api/v1/job-posts`,
       method: 'get',
     })
       .then((response) => {
