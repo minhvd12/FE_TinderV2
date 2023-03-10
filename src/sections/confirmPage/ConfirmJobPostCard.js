@@ -177,7 +177,7 @@ dayjs.extend(isSameOrBefore)
   const handleAccept = () => {
 if(dayjs(jobpost.start_time).isSameOrBefore(dayjs())){
   axios({
-    url: `https://stg-api-itjob.unicode.edu.vn/api/v1/job-posts/approval?id=${jobpost.id}`,
+    url: `https://itjobs.azurewebsites.net/api/v1/job-posts/approval?id=${jobpost.id}`,
     method: 'put',       
     data: {
       id: jobpost.id,
@@ -193,7 +193,7 @@ if(dayjs(jobpost.start_time).isSameOrBefore(dayjs())){
 
 } else {
   axios({
-    url: `https://stg-api-itjob.unicode.edu.vn/api/v1/job-posts/approval?id=${jobpost.id}`,
+    url: `https://itjobs.azurewebsites.net/api/v1/job-posts/approval?id=${jobpost.id}`,
     method: 'put',       
     data: {
       id: jobpost.id,
@@ -213,7 +213,7 @@ if(dayjs(jobpost.start_time).isSameOrBefore(dayjs())){
   };
   const handleReject = () => {
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/job-posts/approval?id=${jobpost.id}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/job-posts/approval?id=${jobpost.id}`,
       method: 'put',       
       data: {
         id: jobpost.id,

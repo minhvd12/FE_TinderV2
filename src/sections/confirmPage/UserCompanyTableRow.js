@@ -59,7 +59,7 @@ export default function UserCompanyTableRow({ rows, onDeleteRow, onReject, onErr
   const handleAccept = () => {
 
     axios({
-      url: `https://stg-api-itjob.unicode.edu.vn/api/v1/emails/accept/join?email=${rows.email}`,
+      url: `https://itjobs.azurewebsites.net/api/v1/emails/accept/join?email=${rows.email}`,
       method: 'get',
     })
       .then((response) => {
